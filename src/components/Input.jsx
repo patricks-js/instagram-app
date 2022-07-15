@@ -1,11 +1,18 @@
-export const Input = ({ identifier, type }) => {
+export const Input = ({
+  identifier,
+  type,
+  placeholder,
+  classLabel,
+  classInput,
+}) => {
   return (
-    <label htmlFor={identifier} className="block mb-2">
+    <label htmlFor={identifier} className={classLabel}>
       <input
         type={type}
         name={identifier}
         id={identifier}
-        className="w-full rounded border border-gray-300 outline-none focus:border-gray-500 py-1 px-2"
+        placeholder={placeholder}
+        className={classInput}
       />
     </label>
   );
