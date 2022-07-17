@@ -41,7 +41,12 @@ export const Post = () => {
               }}
             >
               {liked ? (
-                <Heart size={30} color="#f9595f" weight="fill" />
+                <Heart
+                  size={30}
+                  color="#f9595f"
+                  weight="fill"
+                  className="animate-hearth"
+                />
               ) : (
                 <Heart size={30} />
               )}
@@ -52,7 +57,11 @@ export const Post = () => {
           <div>
             <Button event={() => setMark(!mark)}>
               {mark ? (
-                <BookmarkSimple size={30} weight="fill" />
+                <BookmarkSimple
+                  size={30}
+                  weight="fill"
+                  className="animate-hearth"
+                />
               ) : (
                 <BookmarkSimple size={30} />
               )}

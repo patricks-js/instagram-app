@@ -1,13 +1,13 @@
-import { useState } from "react";
+import usePersistedTheme from "./utils/usePersistedTheme";
 import Home from "./views/Home";
 import Login from "./views/Login";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
+  const [theme, setTheme] = usePersistedTheme("theme", "light");
+  //   localStorage.clear();
   return (
     <main className="w-full min-h-screen bg-gray-100 dark:bg-gray-900 pb-5">
-      <Home darkMode={darkMode} setDarkMode={setDarkMode}/>
+      <Home theme={theme} setTheme={setTheme} />
     </main>
   );
 }
